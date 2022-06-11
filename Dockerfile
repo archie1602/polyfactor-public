@@ -80,7 +80,7 @@ RUN echo "\
 RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
 
-RUN echo "$HOME"
+RUN df -ih
 
 # Install nteract 
 RUN pip install nteract_on_jupyter
