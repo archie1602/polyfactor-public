@@ -80,9 +80,10 @@ RUN echo "\
 RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
 
+RUN echo "$HOME"
 
 # Install nteract 
-RUN pip install nteract-on-jupyter
+RUN pip install nteract_on_jupyter
 
 # Install lastest build of Microsoft.DotNet.Interactive
 RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-experimental/nuget/v3/index.json"
